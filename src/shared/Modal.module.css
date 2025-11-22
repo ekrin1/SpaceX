@@ -23,12 +23,17 @@ h3 {
     text-align: left;
   }
   .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     border: none;
-    background-image: url(../assets/close.svg);
+    background-image: url(../assets/cross.svg);
+    background-size: contain; 
+    background-repeat: no-repeat;
     width: 20px;
     height: 20px;
     background-color: #ffffff;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
 }
 
@@ -40,12 +45,6 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 img {
