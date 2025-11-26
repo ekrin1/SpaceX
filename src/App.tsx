@@ -1,7 +1,7 @@
 import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import './App.css';
-import LaunchList from './components/cards/LaunchList';
+import LaunchList from './components/LaunchList';
 import { reducer, initialState  } from './hooks/Reducer';
 import { useEffect, useReducer } from "react";
 

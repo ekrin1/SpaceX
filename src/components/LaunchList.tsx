@@ -1,5 +1,5 @@
 import Card from './LaunchCard';
-import type { Launch } from '../../types/Launch';
+import type { Launch } from '../types/Launch';
 import styles from './LaunchList.module.css';
 
 type CardListProps = {

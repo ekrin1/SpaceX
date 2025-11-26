@@ -1,7 +1,7 @@
 import { Card as MantineCard, Image, Button } from '@mantine/core';
 import styles from './LaunchCard.module.css';
-import type { Launch } from '../../types/Launch';
-import Modal from '../../shared/Modal';
+import type { Launch } from '../types/Launch';
+import Modal from '../modal/Modal';
 import { useState } from 'react';
 
 type CardProps = {

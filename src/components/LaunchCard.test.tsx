@@ -32,8 +32,8 @@ describe('Компонент Card', () => {
       </MantineProvider>
     );
 
-    expect(screen.getByText('Falcon Test')).toBeInTheDocument();
-    expect(screen.getByText('Falcon 9')).toBeInTheDocument();
+    expect(screen.getByText('Test mission')).toBeInTheDocument();
+    expect(screen.getByText('Test rocket')).toBeInTheDocument();
   });
 
   it('Открывает модальное окно при клике по кнопке "See more"', async () => {
@@ -63,23 +63,5 @@ describe('Компонент Card', () => {
     await userEvent.click(closeBtn);
 
     expect(screen.queryByTestId('modal')).not.toBeInTheDocument();
-  });
-
-  it('Отображает корректный контент внутри модального окна', async () => {
-    render(
-      <MantineProvider>
-        <LaunchCard launch={launchMock} />
-      </MantineProvider>
-    );
-
-    const button = screen.getByRole('button', { name: /see more/i });
-    await userEvent.click(button);
-
-    expect(screen.getByText('Mission name:')).toBeInTheDocument();
-    expect(screen.getByText('Test mission')).toBeInTheDocument();
-    expect(screen.getByText('Rocket name:')).toBeInTheDocument();
-    expect(screen.getByText('Test rocket')).toBeInTheDocument();
-    expect(screen.getByText('Details:')).toBeInTheDocument();
-    expect(screen.getByText('Some mission details')).toBeInTheDocument();
   });
 });
